@@ -8,3 +8,7 @@ import pytest
 #         context = browser.new_context()
 #         page = context.new_page()
         # yield page
+
+@pytest.fixture()
+def navigateAmazon(page):
+    page.goto("https://www.amazon.com/")
