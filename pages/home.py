@@ -25,4 +25,11 @@ class homePage:
 
     def clickOnAccountsndList(self):
         self.accountsndList.click()
+
+    def enterSearchText(self, text):
+        self.searchBox.fill(text)
+
+    def clickOnSearchBtn(self):
+        self.searchBox.press("Enter")
+    
     
