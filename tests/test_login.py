@@ -4,6 +4,7 @@ from pages.home import homePage
 from pages.login import loginPage
 
 @pytest.mark.login
+@pytest.mark.amazon
 def test_positiveLogin(page,navigateAmazon):
     homePageObj = homePage(page)
     loginPageObj = loginPage(page)
