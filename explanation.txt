@@ -19,3 +19,16 @@ browser3:test3:  5, test5
 
 1. git download
 2. git account
+
+
+===========reports==========
+1. html:
+install; pip install pytest-html
+execution command: pytest -m amazon --headed -n 7 -s -v --html=report.html
+start report.html
+
+
+2. allure:
+install: pip install allure-pytest
+execution command: pytest -m amazon --headed -n 7 -s -v --alluredir=allure-results
+allure serve allure-results
