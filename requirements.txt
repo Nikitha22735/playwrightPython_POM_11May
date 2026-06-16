@@ -1,0 +1,12 @@
+allure-pytest==2.15.2
+pytest==9.0.2
+pytest-html
+pytest-xdist
+pytest-playwright
+pytest-order
+playwright
+python-dotenv
+
+
+
+# pip install -r "requirements.txt"

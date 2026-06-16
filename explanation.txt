@@ -32,3 +32,12 @@ start report.html
 install: pip install allure-pytest
 execution command: pytest -m amazon --headed -n 7 -s -v --alluredir=allure-results
 allure serve allure-results
+
+
+
+==========================testdata
+1. json
+2. csv
+3. excel
+4. cli
+5. .env
