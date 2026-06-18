@@ -1,14 +1,3 @@
-# 1. laptop
-# 2. python
-# 3. gitclone
-# 4. install depends with requirements.txt
-# 5. playwright browser install
-# 6. externally install allure command line
-# 7. trigger my testcases
-# 8. open the report 
-# 9. save it in gitHub
-
-
 name: Playwright Python Tests
 
 on:
@@ -25,8 +14,6 @@ jobs:
     steps:
     - name: Set up Python
       uses: actions/setup-python@v4
-      with:
-        python-version: "3:10"
 
     - name: git clone
       uses: actions/checkout@v4
