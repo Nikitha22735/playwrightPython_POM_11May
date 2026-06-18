@@ -6,6 +6,7 @@ pytest-playwright
 pytest-order
 playwright
 python-dotenv
+openpyxl
 
 
 

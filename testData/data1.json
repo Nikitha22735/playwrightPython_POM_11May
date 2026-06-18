@@ -1,4 +1,10 @@
 {
-    "username": "testuser",
-    "password": "testpass"
+    "positive":{
+        "username": "test1",
+        "password": "pw1"
+    },
+    "negitive":{
+        "username": "test2",
+        "password": "pw2"
+    }
 }
