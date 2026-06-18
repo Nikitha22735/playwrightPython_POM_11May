@@ -3,6 +3,7 @@ import csv
 import os
 
 from dotenv import load_dotenv
+from openpyxl import load_workbook
 import pytest
 import json
 
@@ -33,7 +34,7 @@ def test_json():
     # data = open("testData\\data1.json")
     with open("testData\\data1.json") as data:
         formattedData = json.load(data)
-        print(formattedData["username"])
+        print(formattedData["positive"]["username"])
     # data.close()
 
 
@@ -56,10 +57,49 @@ def test_read_csv():
     print(values[1]["username"])
 
 
-@pytest.mark.datathandling
+# @pytest.mark.datathandling
 def test_write_csv():
     with open("testData\\credentails.csv", mode='w', newline="") as data:
         formattedData = csv.DictWriter(data, fieldnames=["username","password"])
         formattedData.writeheader()
         formattedData.writerow({'username': 'tripur123_4', 'password': 'welcome123'})
+
+
+# ================================================excel===================
+
         
+#pip install openpyxl
+# @pytest.mark.datathandling
+def test_read_excel():
+    workbook = load_workbook("testData/sample_creds.xlsx")
+    sheet = workbook["Sheet2"]
+    values = []
+    for i in sheet.iter_cols(min_col=1, values_only=True):
+        values.append(i)
+    print(values)
+
+
+# @pytest.mark.datathandling
+def test_write_excel():
+    workbook = load_workbook("testData/sample_creds.xlsx")
+    sheet = workbook.create_sheet("Sheet5")
+    # sheet = workbook["sheet5"]
+    # sheet.append(["test_newline","line2"])
+    sheet["A2"]="test_1234"
+    # sheet.delete_rows(3,1)
+    workbook.save("testData/sample_creds.xlsx")
+
+
+@pytest.mark.datathandling
+@pytest.mark.parametrize("a,b",[(2,3),(4,5),(6,7)])
+def test_sum(a,b):
+    print(a),
+    print(b)
+    c=10
+    assert c>(a+b)
+
+
+
+
+
+
