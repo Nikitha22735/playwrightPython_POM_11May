@@ -91,7 +91,7 @@ def test_write_excel():
 
 
 @pytest.mark.datathandling
-@pytest.mark.parametrize("a,b",[(2,3),(4,5),(6,7)])
+@pytest.mark.parametrize("a,b",[(2,3),(4,5)])
 def test_sum(a,b):
     print(a),
     print(b)

@@ -1,0 +1,265 @@
+================================================================================
+                    MANUAL TEST CASES - LOGIN PAGE
+             URL: https://practicetestautomation.com/practice-test-login/
+================================================================================
+
+TEST CREDENTIALS:
+  Username: student
+  Password: Password123
+
+================================================================================
+TEST CASE 1: Positive Login Test
+================================================================================
+Test ID: TC_LOGIN_001
+Title: Verify user can successfully login with valid credentials
+Priority: High
+Preconditions:
+  - Browser is open
+  - User is on the login page
+
+Test Steps:
+  1. Navigate to https://practicetestautomation.com/practice-test-login/
+  2. Verify the login page is displayed with Username and Password fields
+  3. Enter username "student" in the Username field
+  4. Enter password "Password123" in the Password field
+  5. Click the "Submit" button
+  
+Expected Results:
+  - User is redirected to the success page
+  - URL contains: practicetestautomation.com/logged-in-successfully/
+  - Success message is displayed (contains "Congratulations" or "successfully logged in")
+  - "Log out" button is visible on the page
+
+Test Data:
+  - Username: student
+  - Password: Password123
+
+================================================================================
+TEST CASE 2: Negative Login Test - Invalid Username
+================================================================================
+Test ID: TC_LOGIN_002
+Title: Verify user cannot login with invalid username
+Priority: High
+Preconditions:
+  - Browser is open
+  - User is on the login page
+
+Test Steps:
+  1. Navigate to https://practicetestautomation.com/practice-test-login/
+  2. Verify the login page is displayed
+  3. Enter username "incorrectUser" in the Username field
+  4. Enter password "Password123" in the Password field
+  5. Click the "Submit" button
+
+Expected Results:
+  - User remains on the login page
+  - Error message is displayed
+  - Error message text is: "Your username is invalid!"
+  - Password field is cleared
+  - Username field retains the entered value
+
+Test Data:
+  - Username: incorrectUser
+  - Password: Password123
+
+================================================================================
+TEST CASE 3: Negative Login Test - Invalid Password
+================================================================================
+Test ID: TC_LOGIN_003
+Title: Verify user cannot login with invalid password
+Priority: High
+Preconditions:
+  - Browser is open
+  - User is on the login page
+
+Test Steps:
+  1. Navigate to https://practicetestautomation.com/practice-test-login/
+  2. Verify the login page is displayed
+  3. Enter username "student" in the Username field
+  4. Enter password "incorrectPassword" in the Password field
+  5. Click the "Submit" button
+
+Expected Results:
+  - User remains on the login page
+  - Error message is displayed
+  - Error message text is: "Your password is invalid!"
+  - Password field is cleared
+  - Username field retains the entered value
+
+Test Data:
+  - Username: student
+  - Password: incorrectPassword
+
+================================================================================
+TEST CASE 4: Empty Username Field Test
+================================================================================
+Test ID: TC_LOGIN_004
+Title: Verify user cannot login with empty username
+Priority: Medium
+Preconditions:
+  - Browser is open
+  - User is on the login page
+
+Test Steps:
+  1. Navigate to https://practicetestautomation.com/practice-test-login/
+  2. Leave Username field empty
+  3. Enter password "Password123" in the Password field
+  4. Click the "Submit" button
+
+Expected Results:
+  - User remains on the login page
+  - An error message or validation message is displayed
+  - Login is not processed
+
+Test Data:
+  - Username: (empty)
+  - Password: Password123
+
+================================================================================
+TEST CASE 5: Empty Password Field Test
+================================================================================
+Test ID: TC_LOGIN_005
+Title: Verify user cannot login with empty password
+Priority: Medium
+Preconditions:
+  - Browser is open
+  - User is on the login page
+
+Test Steps:
+  1. Navigate to https://practicetestautomation.com/practice-test-login/
+  2. Enter username "student" in the Username field
+  3. Leave Password field empty
+  4. Click the "Submit" button
+
+Expected Results:
+  - User remains on the login page
+  - An error message or validation message is displayed
+  - Login is not processed
+
+Test Data:
+  - Username: student
+  - Password: (empty)
+
+================================================================================
+TEST CASE 6: Both Fields Empty Test
+================================================================================
+Test ID: TC_LOGIN_006
+Title: Verify user cannot login with both fields empty
+Priority: Medium
+Preconditions:
+  - Browser is open
+  - User is on the login page
+
+Test Steps:
+  1. Navigate to https://practicetestautomation.com/practice-test-login/
+  2. Leave both Username and Password fields empty
+  3. Click the "Submit" button
+
+Expected Results:
+  - User remains on the login page
+  - An error message or validation message is displayed
+  - Login is not processed
+
+Test Data:
+  - Username: (empty)
+  - Password: (empty)
+
+================================================================================
+TEST CASE 7: Case Sensitivity Test - Username
+================================================================================
+Test ID: TC_LOGIN_007
+Title: Verify username field is case-sensitive
+Priority: Low
+Preconditions:
+  - Browser is open
+  - User is on the login page
+
+Test Steps:
+  1. Navigate to https://practicetestautomation.com/practice-test-login/
+  2. Enter username "STUDENT" (uppercase) in the Username field
+  3. Enter password "Password123" in the Password field
+  4. Click the "Submit" button
+
+Expected Results:
+  - User receives an error message
+  - Error message indicates invalid username
+
+Test Data:
+  - Username: STUDENT
+  - Password: Password123
+
+================================================================================
+TEST CASE 8: SQL Injection Attempt - Username Field
+================================================================================
+Test ID: TC_LOGIN_008
+Title: Verify application prevents SQL injection in username field
+Priority: High
+Preconditions:
+  - Browser is open
+  - User is on the login page
+
+Test Steps:
+  1. Navigate to https://practicetestautomation.com/practice-test-login/
+  2. Enter SQL injection payload "' OR '1'='1" in the Username field
+  3. Enter "Password123" in the Password field
+  4. Click the "Submit" button
+
+Expected Results:
+  - Login fails
+  - An error message is displayed
+  - Application does not bypass authentication
+  - Application handles input safely
+
+Test Data:
+  - Username: ' OR '1'='1
+  - Password: Password123
+
+================================================================================
+TEST CASE 9: XSS Prevention - Username Field
+================================================================================
+Test ID: TC_LOGIN_009
+Title: Verify application prevents XSS attacks in username field
+Priority: High
+Preconditions:
+  - Browser is open
+  - User is on the login page
+
+Test Steps:
+  1. Navigate to https://practicetestautomation.com/practice-test-login/
+  2. Enter XSS payload "<script>alert('XSS')</script>" in the Username field
+  3. Enter "Password123" in the Password field
+  4. Click the "Submit" button
+
+Expected Results:
+  - No alert or script execution occurs
+  - Error message is displayed (invalid username)
+  - Application handles input safely
+
+Test Data:
+  - Username: <script>alert('XSS')</script>
+  - Password: Password123
+
+================================================================================
+TEST CASE 10: Page Load and UI Elements Test
+================================================================================
+Test ID: TC_LOGIN_010
+Title: Verify all required UI elements are present on login page
+Priority: Medium
+Preconditions:
+  - Browser is open
+
+Test Steps:
+  1. Navigate to https://practicetestautomation.com/practice-test-login/
+  2. Verify the page title is "Test login"
+  3. Verify Username field label is displayed
+  4. Verify Password field label is displayed
+  5. Verify "Submit" button is displayed and enabled
+  6. Verify instructions/credentials are visible on the page
+
+Expected Results:
+  - All required UI elements are present
+  - Page loads without errors
+  - All input fields are functional
+  - Submit button is clickable
+
+================================================================================
