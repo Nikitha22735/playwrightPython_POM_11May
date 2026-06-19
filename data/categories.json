@@ -1,5 +1,1 @@
-{
-  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
-  "name" : "categories",
-  "children" : [ ]
-}
+{"uid":"4b4757e66a1912dae1a509f688f20b0f","name":"categories","children":[{"name":"Test defects","children":[{"name":"playwright._impl._errors.TimeoutError: Locator.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"//span[contains(text(),'Account & Lists')]\")","children":[{"name":"test_positiveLogin[chromium]","uid":"8dc5fac04ca0b771","parentUid":"7b2a511696ffd1ed0e733ff56d5a1629","status":"broken","time":{"start":1781883574421,"stop":1781883604425,"duration":30004},"flaky":false,"newFailed":false,"newPassed":false,"newBroken":false,"retriesCount":0,"retriesStatusChange":false,"parameters":["'chromium'"],"tags":["amazon","login"]}],"uid":"7b2a511696ffd1ed0e733ff56d5a1629"}],"uid":"bdbf199525818fae7a8651db9eafe741"}]}

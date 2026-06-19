@@ -1,5 +1,1 @@
-{
-  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
-  "name" : "packages",
-  "children" : [ ]
-}
+{"uid":"83edc06c07f9ae9e47eb6dd1b683e4e2","name":"packages","children":[{"name":"tests.test_login","children":[{"name":"test_positiveLogin[chromium]","uid":"8dc5fac04ca0b771","parentUid":"383153a1e87e9025e9b82f017e857ae3","status":"broken","time":{"start":1781883574421,"stop":1781883604425,"duration":30004},"flaky":false,"newFailed":false,"newPassed":false,"newBroken":false,"retriesCount":0,"retriesStatusChange":false,"parameters":["'chromium'"],"tags":["amazon","login"]}],"uid":"tests.test_login"}]}

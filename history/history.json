@@ -1,1 +1,1 @@
-{ }
+{"4de437fc9624ed3e2490dedba117dcb9":{"statistic":{"failed":0,"broken":1,"skipped":0,"passed":0,"unknown":0,"total":1},"items":[{"uid":"8dc5fac04ca0b771","status":"broken","statusDetails":"playwright._impl._errors.TimeoutError: Locator.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"//span[contains(text(),'Account & Lists')]\")","time":{"start":1781883574421,"stop":1781883604425,"duration":30004}}]}}
