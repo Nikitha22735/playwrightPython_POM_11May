@@ -29,7 +29,7 @@ def test_cli_env():
 
 
 # ========================================json=================================
-# @pytest.mark.datathandling
+@pytest.mark.datathandling
 def test_json():
     # data = open("testData\\data1.json")
     with open("testData\\data1.json") as data:
@@ -91,7 +91,7 @@ def test_write_excel():
 
 
 @pytest.mark.datathandling
-@pytest.mark.parametrize("a,b",[(2,3),(4,5)])
+@pytest.mark.parametrize("a,b",[(2,3),(4,5),(6,7)])
 def test_sum(a,b):
     print(a),
     print(b)
