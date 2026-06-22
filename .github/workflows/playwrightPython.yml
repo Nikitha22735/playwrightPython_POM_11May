@@ -1,4 +1,4 @@
-name: Playwright CI/CD april 18 batch
+name: Playwright CI/CD May 11 batch
 
 on: 
   push:
@@ -6,7 +6,8 @@ on:
   pull_request:
     branches: [main]
   workflow_dispatch:  
-
+  cron: "23 10 23 6 *"  #min hour day month week  UTC timezone
+  cron: "10 22 * * 4"  # Every Monday at midnight
     
 jobs:
   test:
