@@ -35,9 +35,25 @@ allure serve allure-results
 
 
 
-==========================testdata
+==========================testdata===========================
 1. json
 2. csv
 3. excel
 4. cli
 5. .env
+
+
+
+============================================db===============================
+
+
+1. sqlite
+2. mysql
+3. postgress
+4. snowflake
+5. oracle
+6. mongoDb
+
+
+1. table: creden
+2. products : phone, mixer
