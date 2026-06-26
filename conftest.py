@@ -14,6 +14,15 @@ import pytest
 def navigateAmazon(page):
      page.goto("https://www.amazon.in/")
 
+@pytest.fixture()
+def page():
+     with sync_playwright() as p:
+        browser = p.chromium.launch(headless=False)
+        context =  browser.new_context(storage_state="cookies.json")
+        page = context.new_page()
+        page.goto("https://www.amazon.in/")
+        page.wait_for_timeout(5000)
+        yield page
 
 # @pytest.hookimpl(hookwrapper=True)
 # def pytest_runtest_makereport(item):
